@@ -1,2 +1,2 @@
-Jorge Ibinarriaga Robles
+Jorge Ibinarriaga Robles\n
 Miguel Ángel Huamani
