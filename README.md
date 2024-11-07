@@ -1,6 +1,6 @@
 # GTA Alai
 
-Jorge Ibinarriaga Robles & Miguel Ángel Huamani
+Jorge Ibinarriaga Robles & Miguel Ángel Huamani Salinas
 
 ## Tabla de Contenidos
 
