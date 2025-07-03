@@ -1,41 +1,102 @@
-# GTA Alai
+# 🏙️ GTA Alai – AI-Driven Car Simulation Game in Unity
 
-**Autores**: Jorge Ibinarriaga Robles & Miguel Ángel Huamani Salinas  
-
-## Tabla de Contenidos
-1. [Introducción](#introducción)
-2. [Instalación](#instalación)
-3. [Uso](#uso)
-4. [Características](#características)
-
-## Introducción
-GTA Alai es un videojuego de simulación donde el jugador toma el rol de un delincuente que debe huir de la policía. Desarrollado en Unity (2022.3.44f1), este proyecto combina programación orientada a objetos (POO) con principios SOLID y patrones de diseño para crear una experiencia fluida y dinámica.  
-
-El jugador conduce un coche deportivo y enfrenta diversos desafíos, como obstáculos físicos (vallas) y ralentizadores (Speed Debuffers), mientras evita ser atrapado por coches de policía controlados por inteligencia artificial.
-
-## Instalación
-1. Descarga el proyecto desde el [repositorio oficial de GitHub](https://github.com/Ibinarriaga8/Proyecto-Final-Paradigmas).
-2. Descomprime el archivo si está comprimido.
-3. Abre la carpeta `Build` y ejecuta el archivo `GTA Alai.exe`.
-
-Para usuarios de **macOS**, verifica que tengas la versión para macOS o consulta las instrucciones específicas en el repositorio.
-
-## Uso
-- **Controles básicos**:
-  - Dirección: Flechas del teclado.
-  - Frenado: Tecla `Espacio`.
-  - Reinicio de posición: Tecla `R`.
-- **Objetivo**:
-  - Superar 5 niveles escapando de la policía y alcanzando el punto de huida indicado por un helicóptero.
-- Recoge mejoras (Bufs) para restaurar vida y evita obstáculos que reduzcan tu velocidad o dañen tu coche.
-
-## Características
-- **Niveles dinámicos**: Cada nivel incrementa la dificultad con más enemigos.
-- **Sistemas físicos realistas**: Basados en `Rigidbody` para interacciones dinámicas.
-- **Sonido inmersivo**: Sirenas y hélices para guiar al jugador.
-- **Interfaz intuitiva**: Barra de vida y contador de vidas para facilitar el progreso.
-
+**Developed by:** Miguel Ángel Huamani Salinas & Jorge Ibinarriaga Robles
 
 ---
 
-¡Disfruta jugando a **GTA Alai** y desafíate a superar todos los niveles! 🚗🎮
+## 🎮 About the Game
+
+*GTA Alai* is a third-person 3D driving simulation game built with Unity, where the player explores a dynamic city while observing intelligent vehicle behavior. Rather than being a traditional action game, this project focuses on **autonomous vehicle behavior**, **AI-driven interaction**, and **modular gameplay logic**.
+
+The environment includes free exploration, traffic-like behaviors, and interaction with AI-controlled vehicles that respond to the player's presence.
+
+---
+
+## 🤖 Intelligent Car Behaviors
+
+Each vehicle in the game is controlled by a modular AI system that enables:
+
+- 🚗 **Patrolling across waypoints** with smooth transitions.
+- 🧠 **Obstacle detection and reaction**, such as slowing down or stopping.
+- 👁️ **Player tracking** logic for adaptive pursuit behavior.
+- 🔁 **State switching** with Finite State Machines (FSM), supporting modes like *Idle*, *Driving*, and *Chasing*.
+
+The system was implemented using well-established design patterns and object-oriented principles for maximum scalability and reusability.
+
+---
+
+## 🧱 Architecture & Technologies
+
+The game architecture was built with clarity and flexibility in mind:
+
+- **Unity 3D** for game development and physics.
+- **C#** for scripting all behaviors and UI logic.
+- **Design Patterns** including:
+  - `Strategy` for selecting movement logic
+  - `State` for AI behavior transitions
+  - `Observer` for in-game events
+  - `Command` for modular UI actions
+
+---
+
+## 🕹️ How to Play
+
+You control a getaway driver who has just committed a crime. Your mission is to escape the police by reaching the extraction point at each level without being captured or running out of lives.
+
+The game consists of **5 increasingly difficult levels**. As you progress:
+- More police cars are spawned to chase you.
+- You must navigate through obstacles such as fences and slowing zones.
+- A **friendly helicopter** will appear above the extraction point to guide you toward the escape.
+
+### 🎯 Objective
+Reach the helicopter's location on each level to escape the city and advance to the next level.
+
+### Level 1 Gameplay
+![Level 1](assets/level1.png)
+
+### Level 2 Gameplay
+![Level 2](assets/level2.png)
+
+---
+
+### 🎮 Controls
+
+- `←`, `→` – Steer left and right  
+- `↑` – Accelerate  
+- `↓` – Brake or reverse  
+- `SPACE` – Hard brake  
+- `R` – Reset position (in case you're stuck)
+
+---
+
+
+### ❤️ Health & Lives
+
+- The top-left corner displays your remaining lives and current health bar.
+- You start with **10 lives**, and your health starts at **100** per life.
+- Colliding with:
+  - A **police car** reduces health by **50**
+  - A **barrier** reduces health by **10**
+- Losing all health removes one life. Losing all lives ends the game.
+
+---
+
+### ⚠️ Additional Hazards
+
+- **Yellow cubes** on the map represent **Speed Debuffers**.
+- Driving through them reduces your speed by 25 units, making you an easier target.
+
+---
+
+### 🏁 Ending Conditions
+
+- **Victory Scene**: Completing all 5 levels without losing all lives. 
+
+![You Win](assets/end.png)
+
+- **Game Over Scene**: Losing all lives before reaching the end.
+
+![You Lose](assets/loser.png)
+---
+
+
